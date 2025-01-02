@@ -16,17 +16,20 @@ class UserSeeder extends Seeder
     {
         User::factory()->create([
             'name' => 'User',
-            'email' => 'user@example.com'
+            'email' => 'user@example.com',
+            'password' => 'user@User.1$',
         ])->assignRole(RolesEnum::User->value);
 
         User::factory()->create([
             'name' => 'Vendor',
-            'email' => 'vendor@example.com'
+            'email' => 'vendor@example.com',
+            'password' => 'vendor@User.1$',
         ])->assignRole(RolesEnum::Vendor->value);
 
         User::factory()->create([
             'name' => 'Admin',
-            'email' => 'admin@example.com'
+            'email' => 'admin@example.com',
+            'password' => 'admin@User.1$',
         ])->assignRole(RolesEnum::Admin->value);
     }
 }
